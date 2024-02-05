@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Static Site with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+<iframe src="https://my.spline.design/roomrelaxingcopy-c32cafd2169bd136cc0e6dea3029a746/" frameborder="0" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></iframe>
+
+    <!-- Navbar -->
+    <nav>
+    <div class="flex justify-between items-center p-4 bg-transparent text-white fixed w-full">
+        <span></span>
+        <h1 class="text-3xl font-bold absolute w-full text-center left-0">METATRON</h1>
+        <div class="z-10">
+            <button id="whitepaper-btn" class="ml-4 bg-transparent text-white py-2 px-4 rounded-full  hover:text-black transition-colors">Whitepaper</button>
+            <button class="bg-white text-black py-2 px-4 rounded-full shadow-md hover:bg-gray-200 transition-colors">Login</button>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="flex-grow flex items-center justify-center h-screen" style="padding-top: 64px;">
+        <!-- <p>Your main content here, taking up full view height.</p> -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex space-x-6 md:order-2">
+        
+        <a href="#" class="text-gray-500 hover:text-gray-400">
+          <span class="sr-only">X</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-400">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">&copy; 2024 Metatron Pte. Ltd. . All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    <!-- Modal -->
+     <div
+      id="whitepaper-modal"
+      class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"
+      onclick="closeModal(event)"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+      >
+        <div class="mt-3 text-center">
+          <div
+            class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+          >
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()" class="text-green-600">
+              &times;
+            </button>
+          </div>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            Request Whitepaper
+          </h3>
+          <form id="whitepaper-form" class="mt-2">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="mt-2 p-2 w-full border rounded-md"
+            />
+            <button
+              type="submit"
+              class="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-700"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    // Function to open the modal
+    function openModal() {
+      document.getElementById("whitepaper-modal").classList.remove("hidden");
+    }
+
+    // Function to close the modal
+    function closeModal(event) {
+      if (event) {
+        // Prevent closing modal when clicking inside the modal content
+        if (event.target.id === "whitepaper-modal") {
+          document.getElementById("whitepaper-modal").classList.add("hidden");
+        }
+      } else {
+        document.getElementById("whitepaper-modal").classList.add("hidden");
+      }
+    }
+
+    // Event listener for the 'Whitepaper' button
+    document
+      .getElementById("whitepaper-btn")
+      .addEventListener("click", openModal);
+
+    // Form submission logic
+    document
+      .getElementById("whitepaper-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        // You can add your form submission logic here, for example, using Fetch API to send the email
+        alert("Form submitted!"); // Placeholder action
+        closeModal(); // Close the modal after form submission
+      });
+  </script>
+</body>
+</html>
