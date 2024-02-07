@@ -1,0 +1,31 @@
+---
+// Import statements if any
+// const { openModal } = Astro.props;
+import Button from "./Button.astro"
+---
+
+<nav
+  class="flex justify-between mx-auto max-w-7xl items-center p-4 md:py-8 lg:py-12 bg-transparent text-white w-full z-50"
+>
+  <h1 class="text-3xl font-bold">METATRON</h1>
+  <Button gradientBorder>Partner Login</Button>
+</nav>
+
+
+<style>
+
+
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
