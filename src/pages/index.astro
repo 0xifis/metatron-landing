@@ -21,7 +21,7 @@ const features = [
 ---
 
 <Layout title="Metatron: Unlocking a a just renewable transition for all">
-  <main class="w-screen h-screen">
+  <main class="h-screen">
     <div class="h-full mx-auto max-w-7xl flex flex-col justify-center">
       <Navbar />
       <div class="lg:my-auto px-4 text-center md:text-left sm:p-8 lg:p-12 z-50">
@@ -37,7 +37,7 @@ const features = [
         </div>
       </div>
     </div>
-    <HeroBackground /> 
+    <!-- <HeroBackground />  -->
   </main>
   <Section>
     <slot slot="heading"
@@ -62,7 +62,10 @@ const features = [
 <style>
   main {
     color: white;
-    background-color: #a4fcad;
+    /* background-color: #a4fcad; */
+	background-image:  url('/hero-bg.png');
+	background-size: cover;
+	background-position: center;
   }
 
   .text-gradient {
