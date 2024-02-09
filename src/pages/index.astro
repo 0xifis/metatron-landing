@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroBackground from "../components/HeroBackground.astro";
+import IconListItem from "../components/IconListItem.astro";
 import Section from "../components/Section.astro";
 import Feature from "../components/Feature.astro";
+import FeatureSection from "../components/FeatureSection.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Button from "../components/Button.astro";
@@ -10,12 +12,15 @@ import Button from "../components/Button.astro";
 const features = [
   {
     title: "Tokenise and manage your energy portfolio",
+    icon: "heroicons:puzzle-piece",
   },
   {
     title: "Invest in first citizen-run energy infrastructure fund",
+    icon: "heroicons:user-group",
   },
   {
     title: "A new class of cryptocurrency backed by Real World Assets",
+    icon: "heroicons:currency-dollar",
   },
 ];
 ---
@@ -28,7 +33,10 @@ const features = [
         <h1 class="text-4xl sm:text-6xl xl:text-8xl mt-4 z-10 max-w-3xl">
           <span class="text-gradient">Liquid, green investments</span>
         </h1>
-        <h2 class="text-2xl sm:text-3xl xl:text-4xl mt-2 max-w-2xl">Unlock new value from your energy projects with Metatron's tokenization platform.</h2>
+        <h2 class="text-2xl sm:text-3xl xl:text-4xl mt-2 max-w-2xl">
+          Unlock new value from your energy projects with Metatron's
+          tokenization platform.
+        </h2>
         <div
           class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8"
         >
@@ -49,24 +57,112 @@ const features = [
     >
     <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
       <dl
-        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3"
       >
-        {/* Iterate through features to create Feature components */}
         {features.map((feature) => <Feature {...feature} />)}
       </dl>
     </div>
   </Section>
+  <FeatureSection
+    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+    imageAlt="Product screenshot"
+    bgColor="bg-gray-50"
+  >
+    <h2
+      slot="feature-heading"
+      class="text-base font-semibold leading-7 text-mint-green-600"
+    >
+      Empowering Project Developers
+    </h2>
+    <p
+      slot="feature-description"
+      class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+    >
+      Invert the Liquidity Equation: From Fixed to Fluid Financials
+    </p>
+    <p slot="feature-description" class="mt-6 text-lg leading-8 text-gray-600">
+      Unlock new value from your energy projects with Metatron's tokenization
+      platform.
+    </p>
+    <div slot="feature-list">
+      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
+        <IconListItem
+          text="Increase liquidity, providing flexibility to manage and scale operations"
+        />
+        <IconListItem
+          text="Potential for higher returns than traditional asset management models"
+        />
+        <IconListItem
+          text="Gain access to a global network of eco-conscious investors"
+        />
+      </ul>
+      <section class="bg-gray-800 rounded-lg mt-10">
+        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+          <div class="px-6 py-12 md:flex md:flex-col">
+            <div class="md:flex-shrink-0">
+              <img
+                class="h-12"
+                src="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
+                alt="Roland Berger"
+              />
+            </div>
+            <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+              <div class="relative text-lg font-medium text-white md:flex-grow">
+                <svg
+                  class="absolute left-0 top-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-mint-green-800"
+                  fill="currentColor"
+                  viewBox="0 0 32 32"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
+                  ></path>
+                </svg>
+                <p class="relative">
+                  We firmly believe that asset tokenization will grow to become
+                  a market worth at least USD 10 trillion by 2030, representing
+                  a 40-fold increase in the value of tokenized assets from 2022
+                  to 2030.
+                </p>
+              </div>
+              <footer class="mt-8">
+                <div class="flex items-start">
+                  <div
+                    class="inline-flex flex-shrink-0 rounded-full bg-gray-900 p-2"
+                  >
+                    <img
+                      class="h-8 w-8 rounded-full"
+                      src="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-base font-medium text-white">
+                      Roland Berger
+                    </div>
+                    <div class="text-base font-medium text-mint-green-800">
+                      October 2023
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+  </FeatureSection>
+
   <Footer />
 </Layout>
 
 <style>
-  
   main {
     color: white;
     /* background-color: #a4fcad; */
-	background-image:  url('/hero-bg.png');
-	background-size: cover;
-	background-position: center;
+    background-image: url("/hero-bg.png");
+    background-size: cover;
+    background-position: center;
   }
 
   .text-gradient {
@@ -81,32 +177,5 @@ const features = [
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
   }
 </style>

@@ -1,19 +1,19 @@
 <!-- src/components/Feature.astro -->
 ---
 import { Icon } from 'astro-icon/components';
-const { icon = "codicon:question", title, description = "", link = "" } = Astro.props
+const { icon = "heroicon:question", title, description = "", link = "" } = Astro.props
 ---
-<div class="flex flex-col">
-  <dt class="text-base font-semibold leading-7 text-white">
-    <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500 mx-auto">
-      <Icon name={icon} />
+<div class="flex flex-col border p-4 xl:p-6 rounded-lg">
+  <dt class="text-base  leading-7 text-gray-600 ">
+    <div class="flex items-center justify-center mx-auto">
+      <Icon name={icon} class="w-12 h-12 p-2 text-mint-green-500" />
     </div>
-    <h3 class="text-lg tracking-tight text-white sm:text-xl text-center">{title}</h3>
+    <h3 class="text-lg tracking-tight sm:text-xl text-center">{title}</h3>
   </dt>
   <dd class="mt-1 flex flex-auto text-center flex-col text-base leading-7 text-gray-300">
     <p class="flex-auto">{description}</p>
-    <p class="mt-6">
-      <a href={link} class="text-sm font-semibold leading-6 text-indigo-400">Learn more <span aria-hidden="true">→</span></a>
+    <p class="mt-3">
+      <a href={link} class="text-sm font-semibold leading-6 text-mint-green-500">Learn more <span aria-hidden="true">→</span></a>
     </p>
   </dd>
 </div>
