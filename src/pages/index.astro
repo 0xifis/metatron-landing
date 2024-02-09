@@ -1,64 +1,108 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import HeroBackground from '../components/HeroBackground.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroBackground from "../components/HeroBackground.astro";
+import Section from "../components/Section.astro";
+import Feature from "../components/Feature.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
 
+const features = [
+  {
+    title: "Tokenise and manage your energy portfolio",
+  },
+  {
+    title: "Invest in first citizen-run energy infrastructure fund",
+  },
+  {
+    title: "A new class of cryptocurrency backed by Real World Assets",
+  },
+];
 ---
 
 <Layout title="Metatron: Unlocking a a just renewable transition for all">
-		
-
-	<main class="h-screen w-screen mx-auto max-w-7xl">
-		<h1 class="hero text-left md:text-center">Welcome to <span class="text-gradient">Metatron</span></h1>
-		<!-- <p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p> -->
-		<HeroBackground />
-	</main>
+  <main class="w-screen h-screen">
+    <div class="h-full mx-auto max-w-7xl flex flex-col justify-center">
+      <Navbar />
+      <div class="lg:my-auto px-4 text-center md:text-left sm:p-8 lg:p-12 z-50">
+        <h1 class="text-4xl sm:text-6xl xl:text-8xl mt-4 z-10 max-w-3xl">
+          <span class="text-gradient">Liquid, green investments</span>
+        </h1>
+        <h2 class="text-2xl sm:text-3xl xl:text-4xl mt-2 max-w-2xl">Unlock new value from your energy projects with Metatron's tokenization platform.</h2>
+        <div
+          class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8"
+        >
+          <Button gradientBorder>Get Whitepaper</Button>
+          <Button gradientBorder>Partner Login</Button>
+        </div>
+      </div>
+    </div>
+    <HeroBackground /> 
+  </main>
+  <Section>
+    <slot slot="heading"
+      ><span>Making energy investments dramatically more accessible</span></slot
+    >
+    <slot slot="paragraph"
+      >Metatron's platform utilizes cutting-edge technology to revolutionize the
+      financing and management of renewable energy projects.</slot
+    >
+    <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
+      <dl
+        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+      >
+        {/* Iterate through features to create Feature components */}
+        {features.map((feature) => <Feature {...feature} />)}
+      </dl>
+    </div>
+  </Section>
+  <Footer />
 </Layout>
 
 <style>
-	main {
-		color: white;
-	}
+  main {
+    color: white;
+    background-color: #a4fcad;
+  }
 
-	.hero {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-
+  .text-gradient {
+    /* background-image: var(--accent-gradient); */
+    background-image: linear-gradient(
+      to right,
+      rgb(26, 139, 1) 0%,
+      #091509 30%,
+      white 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
