@@ -21,6 +21,18 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: 'Akira Expanded';
+		src: url('/fonts/akira.otf') format('otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Kollektif';
+		src: url('/fonts/kollektif.ttf') format('ttf');
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -33,7 +45,7 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: "Kollektif", system-ui, sans-serif;
+		font-family: 'Kollektif', sans-serif;
 		background: #13151a;
 		background-size: 224px;
 	}
@@ -49,21 +61,7 @@ const { title } = Astro.props;
 			monospace;
 	}
 
-	@font-face {
-		font-family: 'Akira Expanded';
-		src: url('/fonts/akira.otf') format('otf');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: 'Kollektif';
-		src: url('/fonts/kollektif.ttf') format('ttf');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
+	
 
 	h1 {
 		font-family: 'Kollektif', sans-serif;
