@@ -1,23 +1,16 @@
 ---
 const {
-  svgPath = "M0 12.5C0 5.87258 5.37258 0.5 12 0.5V0.5C18.6274 0.5 24 5.87258 24 12.5V12.5C24 19.1274 18.6274 24.5 12 24.5V24.5C5.37258 24.5 0 19.1274 0 12.5V12.5ZM17.0964 7.89004L9.93638 14.8L8.03638 12.77C7.68638 12.44 7.13638 12.42 6.73638 12.7C6.34638 12.99 6.23638 13.5 6.47638 13.91L8.72638 17.57C8.94638 17.91 9.32638 18.12 9.75638 18.12C10.1664 18.12 10.5564 17.91 10.7764 17.57C11.1364 17.1 18.0064 8.91004 18.0064 8.91004C18.9064 7.99004 17.8164 7.18004 17.0964 7.88004V7.89004Z",
-  svgFill = "##437a48",
-  svgPathFill = "#a4fcad",
+  svgPath = 'M0 12.5C0 5.87258 5.37258 0.5 12 0.5V0.5C18.6274 0.5 24 5.87258 24 12.5V12.5C24 19.1274 18.6274 24.5 12 24.5V24.5C5.37258 24.5 0 19.1274 0 12.5V12.5ZM17.0964 7.89004L9.93638 14.8L8.03638 12.77C7.68638 12.44 7.13638 12.42 6.73638 12.7C6.34638 12.99 6.23638 13.5 6.47638 13.91L8.72638 17.57C8.94638 17.91 9.32638 18.12 9.75638 18.12C10.1664 18.12 10.5564 17.91 10.7764 17.57C11.1364 17.1 18.0064 8.91004 18.0064 8.91004C18.9064 7.99004 17.8164 7.18004 17.0964 7.88004V7.89004Z',
+  svgFill = '#ffffff',
+  svgPathFill = '#30b01e',
   text,
-} = Astro.props;
+} = Astro.props
 ---
 
 <li class="flex items-start">
-  <svg
-    focusable="false"
-    class="inline-block mr-2 mt-1 w-6 h-6"
-    role="presentation"
-    viewBox="0 0 24 25"
-    fill="none"
-  >
+  <svg focusable="false" class="inline-block mr-2 mt-1 w-6 h-6 min-w-6" role="presentation" viewBox="0 0 24 25" fill="none">
     <path d={svgPath} fill={svgFill}></path>
-    <path fill-rule="evenodd" clip-rule="evenodd" d={svgPath} fill={svgPathFill}
-    ></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d={svgPath} fill={svgPathFill}></path>
   </svg>
   <p>{text}</p>
 </li>

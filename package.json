@@ -19,6 +19,7 @@
   },
   "packageManager": "yarn@4.1.0",
   "devDependencies": {
-    "@iconify-json/codicon": "^1.1.41"
+    "@iconify-json/codicon": "^1.1.41",
+    "prettier": "^3.2.5"
   }
 }

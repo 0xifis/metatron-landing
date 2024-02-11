@@ -1,28 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import HeroBackground from "../components/HeroBackground.astro";
-import IconListItem from "../components/IconListItem.astro";
-import Section from "../components/Section.astro";
-import Feature from "../components/Feature.astro";
-import FeatureSection from "../components/FeatureSection.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/Button.astro";
+import Layout from '../layouts/Layout.astro'
+import HeroBackground from '../components/HeroBackground.astro'
+import IconListItem from '../components/IconListItem.astro'
+import Section from '../components/Section.astro'
+import Feature from '../components/Feature.astro'
+import BenefitSection from '../components/BenefitSection.astro'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import Button from '../components/Button.astro'
+import QuoteBlock from '../components/QuoteBlock.astro'
 
 const features = [
   {
-    title: "Tokenise and manage your energy portfolio",
-    icon: "heroicons:puzzle-piece",
+    title: 'Tokenise and manage your energy portfolio',
+    icon: 'heroicons:puzzle-piece',
   },
   {
-    title: "Invest in first citizen-run energy infrastructure fund",
-    icon: "heroicons:user-group",
+    title: 'Invest in first citizen-run energy infrastructure fund',
+    icon: 'heroicons:user-group',
   },
   {
-    title: "A new class of cryptocurrency backed by Real World Assets",
-    icon: "heroicons:currency-dollar",
+    title: 'A new class of cryptocurrency backed by Real World Assets',
+    icon: 'heroicons:currency-dollar',
   },
-];
+]
 ---
 
 <Layout title="Metatron: Unlocking a a just renewable transition for all">
@@ -34,125 +35,129 @@ const features = [
           <span class="text-gradient">Liquid, green investments</span>
         </h1>
         <h2 class="text-2xl sm:text-3xl xl:text-4xl mt-2 max-w-2xl">
-          Unlock new value from your energy projects with Metatron's
-          tokenization platform.
+          Unlock new value from your energy projects with Metatron's tokenization platform.
         </h2>
-        <div
-          class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8"
-        >
+        <div class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8">
           <Button gradientBorder>Get Whitepaper</Button>
           <Button gradientBorder>Partner Login</Button>
         </div>
       </div>
     </div>
-    <!-- <HeroBackground />  -->
+    <!-- <HeroBackground /> -->
   </main>
   <Section>
-    <slot slot="heading"
-      ><span>Making energy investments dramatically more accessible</span></slot
-    >
+    <slot slot="heading"><span>Making energy investments dramatically more accessible</span></slot>
     <slot slot="paragraph"
-      >Metatron's platform utilizes cutting-edge technology to revolutionize the
-      financing and management of renewable energy projects.</slot
+      >Metatron's platform utilizes cutting-edge technology to revolutionize the financing and management of renewable energy projects.</slot
     >
     <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
-      <dl
-        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3"
-      >
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3">
         {features.map((feature) => <Feature {...feature} />)}
       </dl>
     </div>
   </Section>
-  <FeatureSection
+  <BenefitSection
     imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
     imageAlt="Product screenshot"
+    imagePosition="left"
     bgColor="bg-gray-50"
   >
-    <h2
-      slot="feature-heading"
-      class="text-base font-semibold leading-7 text-mint-green-600"
-    >
-      Empowering Project Developers
-    </h2>
-    <p
-      slot="feature-description"
-      class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-    >
-      Invert the Liquidity Equation: From Fixed to Fluid Financials
-    </p>
-    <p slot="feature-description" class="mt-6 text-lg leading-8 text-gray-600">
-      Unlock new value from your energy projects with Metatron's tokenization
-      platform.
-    </p>
-    <div slot="feature-list">
-      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
-        <IconListItem
-          text="Increase liquidity, providing flexibility to manage and scale operations"
-        />
-        <IconListItem
-          text="Potential for higher returns than traditional asset management models"
-        />
-        <IconListItem
-          text="Gain access to a global network of eco-conscious investors"
-        />
-      </ul>
-      <section class="bg-gray-800 rounded-lg mt-10">
-        <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
-          <div class="px-6 py-12 md:flex md:flex-col">
-            <div class="md:flex-shrink-0">
-              <img
-                class="h-12"
-                src="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
-                alt="Roland Berger"
-              />
-            </div>
-            <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
-              <div class="relative text-lg font-medium text-white md:flex-grow">
-                <svg
-                  class="absolute left-0 top-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-mint-green-800"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"
-                  ></path>
-                </svg>
-                <p class="relative">
-                  We firmly believe that asset tokenization will grow to become
-                  a market worth at least USD 10 trillion by 2030, representing
-                  a 40-fold increase in the value of tokenized assets from 2022
-                  to 2030.
-                </p>
-              </div>
-              <footer class="mt-8">
-                <div class="flex items-start">
-                  <div
-                    class="inline-flex flex-shrink-0 rounded-full bg-gray-900 p-2"
-                  >
-                    <img
-                      class="h-8 w-8 rounded-full"
-                      src="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="ml-4">
-                    <div class="text-base font-medium text-white">
-                      Roland Berger
-                    </div>
-                    <div class="text-base font-medium text-mint-green-800">
-                      October 2023
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
+    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">Empowering Project Developers</h2>
+    <div slot="benefit-description">
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Invert the Liquidity Equation: From Fixed to Fluid Financials
+      </p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Unlock new value from your energy projects with Metatron's tokenization platform.</p>
     </div>
-  </FeatureSection>
 
+    <div slot="benefit-list">
+      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
+        <IconListItem text="Increase liquidity, providing flexibility to manage and scale operations" />
+        <IconListItem text="Potential for higher returns than traditional asset management models" />
+        <IconListItem text="Gain access to a global network of eco-conscious investors" />
+      </ul>
+      <QuoteBlock
+        bgColor="bg-gray-800"
+        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
+        logoAlt="Roland Berger"
+        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
+        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
+        authorImageAlt="Roland Berger Logo"
+        authorName="Roland Berger"
+        authorDate="October 2023"
+      />
+    </div>
+  </BenefitSection>
+  <BenefitSection
+    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+    imageAlt="Product screenshot"
+    imagePosition="right"
+    bgColor="bg-white"
+  >
+    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">Take control of your energy future</h2>
+    <div slot="benefit-description">
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Invest in community-run green energy projects</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Invest alongside a community in emerging solar and wind projects, paving the way for a sustainable future while earning returns.
+        Your investment transcends traditional energy consumption, actively participating in renewable production, sharing in the benefits
+        of the lowest-cost, green energy.
+      </p>
+    </div>
+
+    <div slot="benefit-list">
+      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
+        <IconListItem text="Greenest and most responsible form of energy investment" />
+        <IconListItem text="Cheaper than home and onsite energy projects: shared energy projects generate energy at 50% lower cost" />
+        <IconListItem text="Enjoy flexible asset management — sell, or expand your stake with ease" />
+      </ul>
+      <!-- <QuoteBlock
+        bgColor="bg-gray-800"
+        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
+        logoAlt="Roland Berger"
+        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
+        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
+        authorImageAlt="Roland Berger Logo"
+        authorName="Roland Berger"
+        authorDate="October 2023"
+      /> -->
+    </div>
+  </BenefitSection>
+  <BenefitSection
+    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+    imageAlt="Product screenshot"
+    imagePosition="left"
+    bgColor="bg-gray-50"
+  >
+    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">
+      Unleasing the full potential of decentralised financing
+    </h2>
+    <div slot="benefit-description">
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">ETRON: Inflation-Proof Green Investments</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Introducing ETRON, a novel stablecoin backed by the real-world performance of renewable energy markets. This innovative financial
+        instrument combines the security of tangible assets with the growth potential of green energy, offering a resilient investment
+        against economic shifts while driving sustainable development.
+      </p>
+    </div>
+
+    <div slot="benefit-list">
+      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
+        <IconListItem text="Guard against inflation with energy-revenue-backed stability" />
+        <IconListItem text="Unlock access to decentralized finance, loans, and yield opportunities with a sustainable investment" />
+        <IconListItem text="Supports renewable energy growth, ensuring long-term liquidity" />
+      </ul>
+      <!-- <QuoteBlock
+        bgColor="bg-gray-800"
+        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
+        logoAlt="Roland Berger"
+        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
+        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
+        authorImageAlt="Roland Berger Logo"
+        authorName="Roland Berger"
+        authorDate="October 2023"
+      /> -->
+    </div>
+  </BenefitSection>
   <Footer />
 </Layout>
 
@@ -160,22 +165,25 @@ const features = [
   main {
     color: white;
     /* background-color: #a4fcad; */
-    background-image: url("/hero-bg.png");
+    background-image: url('/hero-bg.png');
     background-size: cover;
     background-position: center;
   }
 
   .text-gradient {
     /* background-image: var(--accent-gradient); */
-    background-image: linear-gradient(
-      to right,
-      rgb(26, 139, 1) 0%,
-      #091509 30%,
-      white 100%
-    );
+    background-image: linear-gradient(to right, rgb(26, 139, 1) 0%, #091509 30%, white 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  @font-face {
+    font-family: 'Kollektif';
+    src: url('/fonts/kollektif.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 </style>

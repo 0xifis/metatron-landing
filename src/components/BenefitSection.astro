@@ -1,6 +1,5 @@
 ---
-const { imageUrl = "", imageAlt = "" } = Astro.props;
-const { bgColor = 'bg-white' } = Astro.props;
+const { imageUrl = "", imageAlt = "", imagePosition = 'right', bgColor = "bg-white" } = Astro.props;
 ---
  
 <div class={`${bgColor} py-16 sm:py-24 overflow-hidden`}>
@@ -10,12 +9,12 @@ const { bgColor = 'bg-white' } = Astro.props;
     >
       <div class="lg:ml-auto lg:pl-4 lg:pt-4">
         <div class="lg:max-w-lg">
-          <slot name="feature-heading" />
-          <slot name="feature-description" />
-          <slot name="feature-list" />
+          <slot name="benefit-heading" />
+          <slot name="benefit-description" />
+          <slot name="benefit-list" />
         </div>
       </div>
-      <div class="flex items-start justify-end lg:order-first">
+      <div class=`flex items-start ${imagePosition === 'left' ? 'lg:order-first justify-end' : 'lg:order-last justify-start'}`>
         <img
           src={imageUrl}
           alt={imageAlt}
