@@ -570,6 +570,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-json/fa-solid@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "@iconify-json/fa-solid@npm:1.1.8"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/0c23d0c7a8e64b9002e03a9b4c243f005eeafc5b043df7f0a1aff8dca3fdcd045e678d2b8dca03c94be79cf1384c689586e6ef5dfe931d13d49febd0f92f85c2
+  languageName: node
+  linkType: hard
+
+"@iconify-json/fa6-solid@npm:^1.1.20":
+  version: 1.1.20
+  resolution: "@iconify-json/fa6-solid@npm:1.1.20"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/9ea6bd302d9f56d8281d1bcdd6e55cd4c89484d806fe9a64debdc2ea27d280c8d47cbae2bd5cf434aaf0d132b2b832b89da28bd59b32ff20fca4dbf09470c52d
+  languageName: node
+  linkType: hard
+
+"@iconify-json/fa@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "@iconify-json/fa@npm:1.1.8"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/0ee52b01af635a1ea512f0e4d4f0298eb1102061414fe86523a8a8465a78fbe8eef40e01ef6bf792e31321016b75bb24b77874f0567085eeb1c2cb1636888286
+  languageName: node
+  linkType: hard
+
 "@iconify-json/heroicons@npm:^1.1.19":
   version: 1.1.19
   resolution: "@iconify-json/heroicons@npm:1.1.19"
@@ -1240,6 +1267,9 @@ __metadata:
     "@astrojs/netlify": "npm:^5.0.1"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@iconify-json/codicon": "npm:^1.1.41"
+    "@iconify-json/fa": "npm:^1.1.8"
+    "@iconify-json/fa-solid": "npm:^1.1.8"
+    "@iconify-json/fa6-solid": "npm:^1.1.20"
     "@iconify-json/heroicons": "npm:^1.1.19"
     astro: "npm:^4.3.2"
     astro-icon: "npm:^1.1.0"

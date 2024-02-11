@@ -1,35 +1,278 @@
 ---
 // Import statements if any
 // const { openModal } = Astro.props;
-import Button from "./Button.astro"
+import { Icon } from 'astro-icon/components'
+import Button from './Button.astro'
 ---
 
-<nav
-  class="absolute top-0 left-0 right-0 max-w-7xl mx-auto items-center text-center p-4 sm:p-8 lg:p-12 bg-transparent text-white z-50"
->
-  <h1 class="text-3xl lg:text-4xl font-bold ">METATRON</h1>
-  
-</nav>
+<header class="absolute top-0 w-full mx-auto max-w-7xl isolate z-50 bg-white bg-opacity-50 hover:bg-opacity-100 xl:mt-4 xl:rounded-lg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">Metatron</span>
+        <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=mint-green&shade=600" alt="" /> -->
+        <h1 class="text-2xl">Metatron</h1>
+      </a>
+    </div>
+    <div class="flex lg:hidden" id="mobile-menu-button">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <div>
+        <button
+          type="button"
+          id="solutions-button"
+          class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+          aria-expanded="false"
+        >
+          Solutions
+          <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
 
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 -translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 -translate-y-1"
+        -->
+        <div
+          id="solutions-menu"
+          class="absolute inset-x-0 top-0 -z-10 bg-white pt-14 shadow-lg ring-1 ring-gray-900/5 bg-white xl:rounded-lg overflow-hidden menu-hidden hidden"
+        >
+          <div class="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:wrench" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+              </div>
+              <a href="/solutions/project-developer" class="mt-6 block font-semibold text-gray-900">
+                Project Developer
+                <span class="absolute inset-0"></span>
+              </a>
+              <p class="mt-1 text-gray-600">Secure financing for your renewable energy projects</p>
+            </div>
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:user" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+              </div>
+              <a href="/solutions/individual" class="mt-6 block font-semibold text-gray-900">
+                Individual
+                <span class="absolute inset-0"></span>
+              </a>
+              <p class="mt-1 text-gray-600">Participate in the fastest growing sustainable investment</p>
+            </div>
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:building-office-2" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+              </div>
+              <a href="/solutions/business" class="mt-6 block font-semibold text-gray-900">
+                Business
+                <span class="absolute inset-0"></span>
+              </a>
+              <p class="mt-1 text-gray-600">Hedge your energy costs with the cheapest green energy source</p>
+            </div>
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:building-library" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+              </div>
+              <a href="/solutions/municipality-city" class="mt-6 block font-semibold text-gray-900">
+                Municipality & City
+                <span class="absolute inset-0"></span>
+              </a>
+              <p class="mt-1 text-gray-600">Meet your</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="/whitepaper" class="text-sm font-semibold leading-6 text-gray-900">Whitepaper</a>
+      <a href="/knowledge-base" class="text-sm font-semibold leading-6 text-gray-900">Knowledge Base</a>
+      <a href="/about-us" class="text-sm font-semibold leading-6 text-gray-900">About Us</a>
+      <a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900">Contact Us</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="https://app.metatron.energy" class="text-sm font-semibold leading-6 text-gray-900"
+        >Log in <span aria-hidden="true">&rarr;</span></a
+      >
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div id="mobile-menu" class="hidden lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-10"></div>
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">Metatron</span>
+          <!-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=mint-green&shade=600" alt="" /> -->
+          <h1 class="text-2xl sm:hidden">Metatron</h1>
+        </a>
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="mobile-menu-close-button">
+          <span class="sr-only">Close menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <div class="-mx-3">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                aria-controls="disclosure-1"
+                aria-expanded="false"
+              >
+                Solutions
+                <!--
+                  Expand/collapse icon, toggle classes based on menu open state.
+
+                  Open: "rotate-180", Closed: ""
+                -->
+                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <!-- 'Product' sub-menu, show/hide based on menu state. -->
+              <div class="mt-2 space-y-2" id="disclosure-1">
+                <a
+                  href="/solutions/project-developer"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Project Developer</a
+                >
+                <a
+                  href="/solutions/individual"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Individual</a
+                >
+                <a
+                  href="/solutions/business"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Business</a
+                >
+                <a
+                  href="/solutions/municipality-city"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Municipality & City</a
+                >
+              </div>
+            </div>
+            <a href="/whitepaper" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              >Whitepaper</a
+            >
+            <a
+              href="/knowledge-base"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Knowledge Base</a
+            >
+            <a href="/about-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              >About Us</a
+            >
+            <a href="/contact-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              >Contact Us</a
+            >
+          </div>
+          <div class="py-6">
+            <a
+              href="https://app.metatron.energy"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 <style>
+  h1 {
+    font-family: 'Akira Expanded';
+    color: #222;
+  }
+  #solutions-menu.menu-hidden {
+    opacity: 0;
+    transform: translateY(-5em);
+    transition:
+      opacity 150ms ease-in,
+      transform 150ms ease-in;
+  }
 
-	h1 {
-		font-family: "Akira Expanded";
-	}
+  #solutions-menu.menu-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 250ms ease-out,
+      transform 250ms ease-out;
+  }
 
-
-
-
-@keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+  .rotated {
+    transition: transform 250ms ease-in-out;
+    transform: rotateX(180deg);
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button') as HTMLElement
+    const mobileMenu = document.getElementById('mobile-menu') as HTMLElement
+    const closeButton = document.getElementById('mobile-menu-close-button') as HTMLElement
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.style.display = 'block'
+    })
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.style.display = 'none'
+    })
+
+    // Product flyout menu toggle
+    const solutionsButton = document.getElementById('solutions-button') as HTMLElement
+    const solutionsButtonArrow = solutionsButton.getElementsByTagName('svg')[0] as SVGElement
+    const solutionsMenu = document.getElementById('solutions-menu') as HTMLElement
+
+    solutionsButton.addEventListener('click', () => {
+      console.log('Clicked')
+      const isExpanded = solutionsButton.getAttribute('aria-expanded') === 'true'
+      solutionsButton.setAttribute('aria-expanded', String(!isExpanded))
+
+      if (isExpanded) {
+        // Transition to hidden state
+        solutionsMenu.classList.remove('menu-visible')
+        solutionsButtonArrow.classList.remove('rotated')
+        solutionsMenu.classList.add('menu-hidden')
+        // After the transition, you might want to set display: none;
+        solutionsMenu.addEventListener(
+          'transitionend',
+          () => {
+            solutionsMenu.classList.add('hidden')
+          },
+          { once: true }
+        ) // The listener is removed after execution
+      } else {
+        // Make sure the element is display: block to see the transition
+        solutionsMenu.classList.remove('hidden')
+        // Wait for the next frame to add the class for the transition
+        requestAnimationFrame(() => {
+          solutionsMenu.classList.remove('menu-hidden')
+          solutionsMenu.classList.add('menu-visible')
+          solutionsButtonArrow.classList.add('rotated')
+        })
+      }
+    })
+  })
+</script>

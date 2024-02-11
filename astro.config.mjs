@@ -8,7 +8,8 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), icon({
     include: {
-      heroicons: ["*"], // (Default) Loads entire Material Design Icon set
+      heroicons: ["*"],
+      "fa6-solid": ["*"],
     },
   })],
   output: "server",

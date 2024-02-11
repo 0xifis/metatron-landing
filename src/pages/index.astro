@@ -6,7 +6,6 @@ import Section from '../components/Section.astro'
 import Feature from '../components/Feature.astro'
 import BenefitSection from '../components/BenefitSection.astro'
 import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
 import Button from '../components/Button.astro'
 import QuoteBlock from '../components/QuoteBlock.astro'
 
@@ -29,8 +28,7 @@ const features = [
 <Layout title="Metatron: Unlocking a a just renewable transition for all">
   <main class="h-screen">
     <div class="h-full mx-auto max-w-7xl flex flex-col justify-center">
-      <Navbar />
-      <div class="lg:my-auto px-4 text-center md:text-left sm:p-8 lg:p-12 z-50">
+      <div class="lg:my-auto px-4 text-center md:text-left sm:p-8 lg:p-12 z-20">
         <h1 class="text-4xl sm:text-6xl xl:text-8xl mt-4 z-10 max-w-3xl">
           <span class="text-gradient">Liquid, green investments</span>
         </h1>
@@ -38,7 +36,7 @@ const features = [
           Unlock new value from your energy projects with Metatron's tokenization platform.
         </h2>
         <div class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8">
-          <Button gradientBorder>Get Whitepaper</Button>
+          <!-- <Button gradientBorder>Get Whitepaper</Button> -->
           <Button gradientBorder>Partner Login</Button>
         </div>
       </div>
@@ -48,7 +46,10 @@ const features = [
   <Section>
     <slot slot="heading"><span>Making energy investments dramatically more accessible</span></slot>
     <slot slot="paragraph"
-      >Metatron's platform utilizes cutting-edge technology to revolutionize the financing and management of renewable energy projects.</slot
+      >Metatron revolutionizes renewable energy financing by bringing liquidity to a traditionally illiquid market. Our platform leverages
+      blockchain technology to fractionalize assets, making it easier than ever for individuals and businesses worldwide to invest in green
+      energy projects. Join us in accelerating the global transition to sustainable energy, with secure, transparent, and accessible
+      investments.</slot
     >
     <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3">
@@ -158,7 +159,6 @@ const features = [
       /> -->
     </div>
   </BenefitSection>
-  <Footer />
 </Layout>
 
 <style>
