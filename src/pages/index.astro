@@ -5,21 +5,27 @@ import IconListItem from '../components/IconListItem.astro'
 import Section from '../components/Section.astro'
 import Feature from '../components/Feature.astro'
 import BenefitSection from '../components/BenefitSection.astro'
-import Navbar from '../components/Navbar.astro'
-import Button from '../components/Button.astro'
 import QuoteBlock from '../components/QuoteBlock.astro'
+import financingImg from '../images/financing.png'
+import crowdImg from '../images/crowd.png'
 
 const features = [
   {
-    title: 'Tokenise and manage your energy portfolio',
+    title: 'Tokenize your solar and wind energy assets',
+    description:
+      'Transform your renewable energy assets into fractional, transparent and liquid commodities. Streamline your investment portfolio for greater flexibility and potential returns.',
     icon: 'heroicons:puzzle-piece',
   },
   {
-    title: 'Invest in first citizen-run energy infrastructure fund',
+    title: 'Connect with a global investment community',
+    description:
+      'Unlock private markets and collaborate with eco-conscious investors worldwide. Be part of the global movement shaping the future of green finance.',
     icon: 'heroicons:user-group',
   },
   {
-    title: 'A new class of cryptocurrency backed by Real World Assets',
+    title: 'Experience seamless, secure financing',
+    description:
+      'Invest securely and watch your contributions grow. Benefit from automated, transparent revenue distributions powered by smart contracts and digital ledger technology.',
     icon: 'heroicons:currency-dollar',
   },
 ]
@@ -37,19 +43,18 @@ const features = [
         </h2>
         <div class="flex flex-col items-center md:items-start mx-auto md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-8">
           <!-- <Button gradientBorder>Get Whitepaper</Button> -->
-          <Button gradientBorder>Partner Login</Button>
+          <!-- <Button gradientBorder>Partner Login</Button> -->
         </div>
       </div>
     </div>
-    <HeroBackground />
+    <!-- <HeroBackground /> -->
   </main>
   <Section>
     <slot slot="heading"><span>Making energy investments dramatically more accessible</span></slot>
     <slot slot="paragraph"
-      >Metatron revolutionizes renewable energy financing by bringing liquidity to a traditionally illiquid market. Our platform leverages
-      blockchain technology to fractionalize assets, making it easier than ever for individuals and businesses worldwide to invest in green
-      energy projects. Join us in accelerating the global transition to sustainable energy, with secure, transparent, and accessible
-      investments.</slot
+      >Metatron unites a global community in the mission to fast-track the renewable energy transition through digitalization and
+      collaboration. Our trustless platform simplifies the investment process, reducing the time and costs associated with financing green
+      energy projects.</slot
     >
     <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
       <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3">
@@ -57,58 +62,43 @@ const features = [
       </dl>
     </div>
   </Section>
-  <BenefitSection
-    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-    imageAlt="Product screenshot"
-    imagePosition="left"
-    bgColor="bg-gray-50"
-  >
-    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">Empowering Project Developers</h2>
+  <BenefitSection imageUrl={financingImg.src} imageAlt="Product screenshot" imagePosition="left" bgColor="bg-white">
+    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">
+      Empowering project developers and asset managers
+    </h2>
     <div slot="benefit-description">
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Invert the Liquidity Equation: From Fixed to Fluid Financials
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">You Don't Need to Pay the Liquidity Premium</p>
+      <p class="mt-6 text-lg text-gray-600">
+        Unlock hidden value in your renewable energy projects, transforming them from fixed assets into dynamic, tradeable entities. Break
+        free the constraints of traditional financing—lengthy negotiations, unnecessary intermediaries, and restrictive lock-ins. Take back
+        control and do what you do best - Building our greener tomorrow
       </p>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Unlock new value from your energy projects with Metatron's tokenization platform.</p>
     </div>
 
     <div slot="benefit-list">
       <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
-        <IconListItem text="Increase liquidity, providing flexibility to manage and scale operations" />
-        <IconListItem text="Potential for higher returns than traditional asset management models" />
-        <IconListItem text="Gain access to a global network of eco-conscious investors" />
+        <IconListItem text="Secure debt-free capital at almost 10-fold faster" />
+        <IconListItem text="Enhance net asset value through global investor exposure" />
+        <IconListItem text="Cut operational costs by eliminating intermediaries" />
       </ul>
-      <QuoteBlock
-        bgColor="bg-gray-800"
-        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
-        logoAlt="Roland Berger"
-        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
-        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
-        authorImageAlt="Roland Berger Logo"
-        authorName="Roland Berger"
-        authorDate="October 2023"
-      />
     </div>
   </BenefitSection>
-  <BenefitSection
-    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-    imageAlt="Product screenshot"
-    imagePosition="right"
-    bgColor="bg-white"
-  >
+  <BenefitSection imageUrl={crowdImg.src} imageAlt="Product screenshot" imagePosition="right" bgColor="bg-white">
     <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">Take control of your energy future</h2>
     <div slot="benefit-description">
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Invest in community-run green energy projects</p>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Investing in Renewable Energy Made Flexible and Universal
+      </p>
       <p class="mt-6 text-lg leading-8 text-gray-600">
-        Invest alongside a community in emerging solar and wind projects, paving the way for a sustainable future while earning returns.
-        Your investment transcends traditional energy consumption, actively participating in renewable production, sharing in the benefits
-        of the lowest-cost, green energy.
+        Individuals, SMEs and communities can directly invest in previously inaccessible utility-scale energy projects. Along with receiving
+        a steady revenue, you are delivering the most impact to accelerate the renewable energy transition.
       </p>
     </div>
 
     <div slot="benefit-list">
       <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
-        <IconListItem text="Greenest and most responsible form of energy investment" />
-        <IconListItem text="Cheaper than home and onsite energy projects: shared energy projects generate energy at 50% lower cost" />
+        <IconListItem text="Commit your capital to the greenest and most responsible investments" />
+        <IconListItem text="Benefit from projects that deliver energy 50% cheaper than home and onsite projects" />
         <IconListItem text="Enjoy flexible asset management — sell, or expand your stake with ease" />
       </ul>
       <!-- <QuoteBlock
@@ -123,7 +113,7 @@ const features = [
       /> -->
     </div>
   </BenefitSection>
-  <BenefitSection
+  <!-- <BenefitSection
     imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
     imageAlt="Product screenshot"
     imagePosition="left"
@@ -147,18 +137,8 @@ const features = [
         <IconListItem text="Unlock access to decentralized finance, loans, and yield opportunities with a sustainable investment" />
         <IconListItem text="Supports renewable energy growth, ensuring long-term liquidity" />
       </ul>
-      <!-- <QuoteBlock
-        bgColor="bg-gray-800"
-        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
-        logoAlt="Roland Berger"
-        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
-        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
-        authorImageAlt="Roland Berger Logo"
-        authorName="Roland Berger"
-        authorDate="October 2023"
-      /> -->
     </div>
-  </BenefitSection>
+  </BenefitSection> -->
 </Layout>
 
 <style>
