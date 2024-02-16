@@ -5,8 +5,8 @@ import { Icon } from 'astro-icon/components'
 import Button from './Button.astro'
 ---
 
-<header class="absolute top-0 z-50 w-full mx-auto bg-white max-w-7xl isolate bg-opacity-50 hover:bg-opacity-100 xl:mt-4 xl:rounded-lg">
-  <nav class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8" aria-label="Global">
+<header class="absolute top-0 isolate z-50 mx-auto w-full max-w-7xl bg-white bg-opacity-50 hover:bg-opacity-100 xl:mt-4 xl:rounded-lg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="/" class="-m-1.5 p-1.5">
         <span class="sr-only">Metatron</span>
@@ -17,7 +17,7 @@ import Button from './Button.astro'
     <div class="flex lg:hidden" id="mobile-menu-button">
       <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
@@ -27,11 +27,11 @@ import Button from './Button.astro'
         <button
           type="button"
           id="solutions-button"
-          class="flex items-center text-sm font-semibold text-gray-900 gap-x-1 leading-6"
+          class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
           aria-expanded="false"
         >
           Solutions
-          <svg class="flex-none w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path
               fill-rule="evenodd"
               d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
@@ -51,44 +51,44 @@ import Button from './Button.astro'
         -->
         <div
           id="solutions-menu"
-          class="absolute inset-x-0 top-0 hidden overflow-hidden bg-white shadow-lg -z-10 pt-14 ring-1 ring-gray-900/5 xl:rounded-lg menu-hidden"
+          class="menu-hidden absolute inset-x-0 top-0 -z-10 hidden overflow-hidden bg-white pt-14 shadow-lg ring-1 ring-gray-900/5 xl:rounded-lg"
         >
-          <div class="px-6 py-10 mx-auto grid max-w-7xl grid-cols-4 gap-x-4 lg:px-8 xl:gap-x-8">
-            <div class="relative p-6 text-sm rounded-lg group leading-6 hover:bg-gray-50">
-              <div class="flex items-center justify-center rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
-                <Icon name="heroicons:wrench" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+          <div class="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:wrench" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/project-developer" class="block mt-6 font-semibold text-gray-900">
+              <a href="/solutions/project-developer" class="mt-6 block font-semibold text-gray-900">
                 Project Developer
                 <span class="absolute inset-0"></span>
               </a>
               <p class="mt-1 text-gray-600">Secure financing for your renewable energy projects</p>
             </div>
-            <div class="relative p-6 text-sm rounded-lg group leading-6 hover:bg-gray-50">
-              <div class="flex items-center justify-center rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
-                <Icon name="heroicons:user" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:user" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/individual" class="block mt-6 font-semibold text-gray-900">
+              <a href="/solutions/individual" class="mt-6 block font-semibold text-gray-900">
                 Individual
                 <span class="absolute inset-0"></span>
               </a>
               <p class="mt-1 text-gray-600">Participate in the fastest growing sustainable investment</p>
             </div>
-            <div class="relative p-6 text-sm rounded-lg group leading-6 hover:bg-gray-50">
-              <div class="flex items-center justify-center rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
-                <Icon name="heroicons:building-office-2" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:building-office-2" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/business" class="block mt-6 font-semibold text-gray-900">
+              <a href="/solutions/business" class="mt-6 block font-semibold text-gray-900">
                 Business
                 <span class="absolute inset-0"></span>
               </a>
               <p class="mt-1 text-gray-600">Hedge your energy costs with the cheapest green energy source</p>
             </div>
-            <div class="relative p-6 text-sm rounded-lg group leading-6 hover:bg-gray-50">
-              <div class="flex items-center justify-center rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white">
-                <Icon name="heroicons:building-library" class="w-12 h-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
+            <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <Icon name="heroicons:building-library" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/municipality-city" class="block mt-6 font-semibold text-gray-900">
+              <a href="/solutions/municipality-city" class="mt-6 block font-semibold text-gray-900">
                 Municipality & City
                 <span class="absolute inset-0"></span>
               </a>
@@ -98,13 +98,13 @@ import Button from './Button.astro'
         </div>
       </div>
 
-      <a href="/whitepaper" class="text-sm font-semibold text-gray-900 leading-6">Whitepaper</a>
-      <a href="/knowledge-base" class="text-sm font-semibold text-gray-900 leading-6">Knowledge Base</a>
-      <a href="/about-us" class="text-sm font-semibold text-gray-900 leading-6">About Us</a>
-      <a href="/contact-us" class="text-sm font-semibold text-gray-900 leading-6">Contact Us</a>
+      <a href="/whitepaper" class="text-sm font-semibold leading-6 text-gray-900">Whitepaper</a>
+      <a href="/knowledge-base" class="text-sm font-semibold leading-6 text-gray-900">Knowledge Base</a>
+      <a href="/about-us" class="text-sm font-semibold leading-6 text-gray-900">About Us</a>
+      <a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900">Contact Us</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="https://app.metatron.energy" class="text-sm font-semibold text-gray-900 leading-6"
+      <a href="https://app.metatron.energy" class="text-sm font-semibold leading-6 text-gray-900"
         >Log in <span aria-hidden="true">&rarr;</span></a
       >
     </div>
@@ -113,7 +113,7 @@ import Button from './Button.astro'
   <div id="mobile-menu" class="hidden lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
-    <div class="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
       <div class="flex items-center justify-between">
         <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Metatron</span>
@@ -122,14 +122,14 @@ import Button from './Button.astro'
         </a>
         <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="mobile-menu-close-button">
           <span class="sr-only">Close menu</span>
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="py-6 space-y-2">
+          <div class="space-y-2 py-6">
             <div class="-mx-3">
               <button
                 type="button"
@@ -143,7 +143,7 @@ import Button from './Button.astro'
 
                   Open: "rotate-180", Closed: ""
                 -->
-                <svg class="flex-none w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path
                     fill-rule="evenodd"
                     d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
@@ -154,35 +154,35 @@ import Button from './Button.astro'
               <div class="mt-2 space-y-2" id="disclosure-1">
                 <a
                   href="/solutions/project-developer"
-                  class="block py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Project Developer</a
                 >
                 <a
                   href="/solutions/individual"
-                  class="block py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50">Individual</a
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Individual</a
                 >
                 <a
                   href="/solutions/business"
-                  class="block py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50">Business</a
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Business</a
                 >
                 <a
                   href="/solutions/municipality-city"
-                  class="block py-2 pl-6 pr-3 text-sm font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Municipality & City</a
                 >
               </div>
             </div>
-            <a href="/whitepaper" class="block px-3 py-2 -mx-3 text-base font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50"
+            <a href="/whitepaper" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >Whitepaper</a
             >
             <a
               href="/knowledge-base"
-              class="block px-3 py-2 -mx-3 text-base font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50">Knowledge Base</a
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Knowledge Base</a
             >
-            <a href="/about-us" class="block px-3 py-2 -mx-3 text-base font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50"
+            <a href="/about-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >About Us</a
             >
-            <a href="/contact-us" class="block px-3 py-2 -mx-3 text-base font-semibold text-gray-900 rounded-lg leading-7 hover:bg-gray-50"
+            <a href="/contact-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >Contact Us</a
             >
           </div>

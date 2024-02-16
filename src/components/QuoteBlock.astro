@@ -13,7 +13,7 @@ const {
 ---
 
 <section class={`${bgColor} rounded-lg overflow-hidden`}>
-  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="px-6 py-12 md:flex md:flex-col">
       <div class="md:flex-shrink-0">
         <img class="h-12" src={logoUrl} alt={logoAlt} />
@@ -21,7 +21,7 @@ const {
       <blockquote class="mt-6 md:flex-grow">
         <div class="relative text-lg font-medium text-white">
           <svg
-            class="absolute top-0 left-0 w-8 h-8 -translate-x-3 -translate-y-2 transform text-mint-green-800"
+            class="absolute left-0 top-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-mint-green-800"
             fill="currentColor"
             viewBox="0 0 32 32"
             aria-hidden="true"
@@ -34,8 +34,8 @@ const {
         </div>
         <footer class="mt-8">
           <div class="flex items-start">
-            <div class="flex-shrink-0 p-2 bg-gray-900 rounded-full">
-              <img class="w-8 h-8 rounded-full" src={authorImageUrl} alt={authorImageAlt} />
+            <div class="flex-shrink-0 rounded-full bg-gray-900 p-2">
+              <img class="h-8 w-8 rounded-full" src={authorImageUrl} alt={authorImageAlt} />
             </div>
             <div class="ml-4">
               <div class="text-base font-medium text-white">{authorName}</div>

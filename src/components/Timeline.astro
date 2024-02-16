@@ -14,6 +14,6 @@ interface TimelineProps {
 const { blocks } = Astro.props as TimelineProps
 ---
 
-<div class="pt-8 space-y-4">
+<div class="space-y-4 pt-8">
   {blocks.map((block) => <TimeBlock number={block.number} heading={block.heading} description={block.description} />)}
 </div>

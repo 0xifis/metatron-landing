@@ -7,8 +7,8 @@ interface TimeBlockProps {
 const { number, heading, description } = Astro.props as TimeBlockProps
 ---
 
-<div class="relative pb-4 pl-8 border-l-2 border-gray-300 last:border-l-0">
-  <div class="absolute flex items-center justify-center w-10 h-10 border-4 border-gray-300 rounded-full -top-5 -left-5 bg-mint-green-600">
+<div class="relative border-l-2 border-gray-300 pb-4 pl-8 last:border-l-0">
+  <div class="absolute -left-5 -top-5 flex h-10 w-10 items-center justify-center rounded-full border-4 border-gray-300 bg-mint-green-600">
     <span class="text-xs font-bold text-white">{number}</span>
   </div>
   <h2 class="text-lg font-semibold">{heading}</h2>

@@ -21,9 +21,22 @@
     "@tailwindcss/forms": "^0.5.7",
     "astro": "^4.3.2",
     "astro-icon": "^1.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx,css,html}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
