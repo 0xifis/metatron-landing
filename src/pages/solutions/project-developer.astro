@@ -5,6 +5,8 @@ import Feature from '../../components/Feature.astro'
 import QuoteBlock from '../../components/QuoteBlock.astro'
 import { Image } from 'astro:assets'
 import gardenImage from '../../images/garden.png'
+import Timeline from '../../components/Timeline.astro'
+import CTASection from '../../components/CTASection.astro'
 
 const features = [
   {
@@ -26,27 +28,51 @@ const features = [
     icon: 'heroicons:currency-dollar',
   },
 ]
+
+const timeBlocks = [
+  {
+    number: '1',
+    heading: 'Project Evaluation and Framework Setup',
+    description:
+      "Begin with a detailed assessment to unlock your project's full potential. We'll navigate you through the regulatory environment, ensuring your project is primed for tokenization with all legal standards met.",
+  },
+  {
+    number: '2',
+    heading: 'Asset Tokenisation',
+    description:
+      "Utilize Metatron to form a Special Purpose Vehicle (SPV) tailored to your project. This step democratizes your project's equity by breaking it into digital tokens. Our platform streamlines the token creation and distribution process, symbolizing equity stakes in future revenue streams.",
+  },
+  {
+    number: '3',
+    heading: 'Automating Operations with Smart Contracts',
+    description:
+      'Embed efficiency and transparency into your project through our smart contract infrastructure. From token sales and equity management to revenue distribution, our automated contracts execute essential operations reliably, based on set protocols.',
+  },
+  {
+    number: '4',
+    heading: 'Ensuring Fair and Transparent Revenue Sharing',
+    description:
+      'Integrate smart meters to track and monetize the energy generation of your project. Profits are automatically allocated to investors proportionally via smart contracts, guaranteeing a transparent and equitable revenue sharing process.',
+  },
+]
 ---
 
 <Layout title="Metatron: Unlocking a a just renewable transition for all">
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8 lg:mt-12">
-      <div class="mx-auto max-w-2xl lg:text-center">
+  <!-- Main feature highlight -->
+  <div class="py-24 bg-white sm:py-32">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8 lg:mt-12">
+      <div class="max-w-2xl mx-auto lg:text-center">
         <h2 class="text-base font-semibold leading-7 text-mint-green-600">Project Developer & Asset Managers</h2>
         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           A Comprehensive Financing Platform for Renewable Energy
         </p>
-        <!-- <p class="mt-6 text-lg leading-8 text-gray-600">
-          Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-          at. In mi viverra elit nunc.
-        </p> -->
       </div>
-      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+      <div class="max-w-2xl mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="max-w-xl grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           <div class="relative pl-16">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <dt class="text-base text-xl font-bold text-gray-900 leading-7">
+              <div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 rounded-lg bg-mint-green-600">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -56,15 +82,15 @@ const features = [
               </div>
               10x faster financing of renewable energy projects
             </dt>
-            <dd class="mt-2 text-base leading-7 text-gray-600">
+            <dd class="mt-2 text-base text-gray-600 leading-7">
               Without brokers and other intermediries, connect to a global network of approved, eco-conscious investors directly and secure
               financing in days, not months or a year.
             </dd>
           </div>
           <div class="relative pl-16">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <dt class="text-base text-xl font-bold text-gray-900 leading-7">
+              <div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 rounded-lg bg-mint-green-600">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -74,14 +100,14 @@ const features = [
               </div>
               50% lower transaction costs
             </dt>
-            <dd class="mt-2 text-base leading-7 text-gray-600">
+            <dd class="mt-2 text-base text-gray-600 leading-7">
               Lowering entry barriers democratizes funding, inviting more investors and fostering competitive, favorable offers.
             </dd>
           </div>
           <div class="relative pl-16">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <dt class="text-base text-xl font-bold text-gray-900 leading-7">
+              <div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 rounded-lg bg-mint-green-600">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -91,15 +117,15 @@ const features = [
               </div>
               Same-day settlements
             </dt>
-            <dd class="mt-2 text-base leading-7 text-gray-600">
+            <dd class="mt-2 text-base text-gray-600 leading-7">
               Blockchain and smart contracts enable instant fund settlement, allowing developers to access funds the same day crowdfunding
               goals are met.
             </dd>
           </div>
           <div class="relative pl-16">
-            <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <dt class="text-base text-xl font-bold text-gray-900 leading-7">
+              <div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 rounded-lg bg-mint-green-600">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -109,7 +135,7 @@ const features = [
               </div>
               Access to a broader pool of investors
             </dt>
-            <dd class="mt-2 text-base leading-7 text-gray-600">
+            <dd class="mt-2 text-base text-gray-600 leading-7">
               A broader investor pool not only fuels current projects with diverse funding but also elevates company recognition, smoothing
               the path for future endeavors.
             </dd>
@@ -118,7 +144,9 @@ const features = [
       </div>
     </div>
   </div>
-  <div class="p-4 lg:p-10 bg-white flex justify-center items-center">
+
+  <!-- Quote from Roland Berger -->
+  <div class="flex items-center justify-center p-4 bg-white lg:p-10">
     <div class="max-w-2xl">
       <QuoteBlock
         bgColor="bg-gray-800"
@@ -132,11 +160,13 @@ const features = [
       />
     </div>
   </div>
+
+  <!-- Communitiy/Social Impact -->
   <Section>
     <slot slot="heading">
       <div class="flex flex-col items-start">
-        <Image src={gardenImage} alt="Girl sitting in a garden with flowers growing." class="w-96 mb-4" />
-        <h2>Empowering Communities and Driving Social Change with Crowdfunding</h2>
+        <Image src={gardenImage} alt="Girl sitting in a garden with flowers growing." class="mb-4 w-96" />
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Empowering Communities and Driving Social Change with Crowdfunding</h2>
       </div>
     </slot>
     <slot slot="paragraph"
@@ -145,38 +175,34 @@ const features = [
       are invested both financially and emotionally in the success of your projects.</slot
     >
     <div class="mx-auto mt-4 sm:mt-8 lg:mt-12">
-      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3">
+      <dl class="max-w-xl grid grid-cols-1 gap-x-8 gap-y-8 sm:max-w-none sm:grid-cols-2 md:max-w-none md:grid-cols-3">
         {features.map((feature) => <Feature {...feature} />)}
       </dl>
     </div>
   </Section>
 
-  <!-- <BenefitSection
-    imageUrl="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-    imageAlt="Product screenshot"
-    imagePosition="left"
-    bgColor="bg-gray-50"
-  >
-    <h2 slot="benefit-heading" class="text-base font-semibold leading-7 text-mint-green-600">
-      Unleasing the full potential of decentralised financing
-    </h2>
-    <div slot="benefit-description">
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">ETRON: Inflation-Proof Green Investments</p>
-      <p class="mt-6 text-lg leading-8 text-gray-600">
-        Introducing ETRON, a novel stablecoin backed by the real-world performance of renewable energy markets. This innovative financial
-        instrument combines the security of tangible assets with the growth potential of green energy, offering a resilient investment
-        against economic shifts while driving sustainable development.
-      </p>
-    </div>
+  <!-- How it works Section -->
+  <div class="py-16 overflow-hidden bg-gray-50 sm:py-24">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="max-w-2xl mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+          <div class="lg:max-w-lg">
+            <h1 class="pr-8 text-3xl font-bold tracking-tight sm:text-4xl">How financing on Metatron works</h1>
+            <slot name="benefit-description" />
+          </div>
+        </div>
 
-    <div slot="benefit-list">
-      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
-        <IconListItem text="Guard against inflation with energy-revenue-backed stability" />
-        <IconListItem text="Unlock access to decentralized finance, loans, and yield opportunities with a sustainable investment" />
-        <IconListItem text="Supports renewable energy growth, ensuring long-term liquidity" />
-      </ul>
+        <Timeline blocks={timeBlocks} />
+      </div>
     </div>
-  </BenefitSection> -->
+  </div>
+
+  <!-- CTA -->
+  <CTASection bgColor="bg-blue-800">
+    <span slot="heading">Accelerate your funding cycle - Smarter, faster and responsible</span>
+    <span slot="description">Reach out to us to learn more about how you can benefit from being part of the community</span>
+    <span slot="action-text">Schedule a demo</span>
+  </CTASection>
 </Layout>
 
 <style>

@@ -1,0 +1,19 @@
+---
+// Timeline.astro
+import TimeBlock from './TimeBlock.astro'
+
+interface TimeBlockData {
+  number: string
+  heading: string
+  description: string
+}
+
+interface TimelineProps {
+  blocks: TimeBlockData[]
+}
+const { blocks } = Astro.props as TimelineProps
+---
+
+<div class="pt-8 space-y-4">
+  {blocks.map((block) => <TimeBlock number={block.number} heading={block.heading} description={block.description} />)}
+</div>
