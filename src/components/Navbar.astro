@@ -68,8 +68,8 @@ import Button from './Button.astro'
               <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                 <Icon name="heroicons:user" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/individual" class="mt-6 block font-semibold text-gray-900">
-                Individual
+              <a href="#" class="disabled mt-6 block font-semibold text-gray-900">
+                Individual (Coming Soon)
                 <span class="absolute inset-0"></span>
               </a>
               <p class="mt-1 text-gray-600">Participate in the fastest growing sustainable investment</p>
@@ -78,8 +78,8 @@ import Button from './Button.astro'
               <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                 <Icon name="heroicons:building-office-2" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/business" class="mt-6 block font-semibold text-gray-900">
-                Business
+              <a href="#" class="disabled mt-6 block font-semibold text-gray-900">
+                Business (Coming Soon)
                 <span class="absolute inset-0"></span>
               </a>
               <p class="mt-1 text-gray-600">Hedge your energy costs with the cheapest green energy source</p>
@@ -88,19 +88,19 @@ import Button from './Button.astro'
               <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                 <Icon name="heroicons:building-library" class="h-12 w-12 p-2 text-gray-800 group-hover:text-mint-green-600" />
               </div>
-              <a href="/solutions/municipality-city" class="mt-6 block font-semibold text-gray-900">
-                Municipality & City
+              <a href="#" class="disabled mt-6 block font-semibold text-gray-900">
+                Municipality & City (Coming Soon)
                 <span class="absolute inset-0"></span>
               </a>
-              <p class="mt-1 text-gray-600">Meet your</p>
+              <p class="mt-1 text-gray-600">Engage your community to build new community green energy projects</p>
             </div>
           </div>
         </div>
       </div>
 
       <a href="/whitepaper" class="text-sm font-semibold leading-6 text-gray-900">Whitepaper</a>
-      <a href="/knowledge-base" class="text-sm font-semibold leading-6 text-gray-900">Knowledge Base</a>
-      <a href="/about-us" class="text-sm font-semibold leading-6 text-gray-900">About Us</a>
+      <!-- <a href="/knowledge-base" class="text-sm font-semibold leading-6 text-gray-900">Knowledge Base</a> -->
+      <!-- <a href="/about-us" class="text-sm font-semibold leading-6 text-gray-900">About Us</a> -->
       <a href="/contact-us" class="text-sm font-semibold leading-6 text-gray-900">Contact Us</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -157,31 +157,27 @@ import Button from './Button.astro'
                   class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Project Developer</a
                 >
-                <a
-                  href="/solutions/individual"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Individual</a
+                <a href="#" class="disabled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Individual (Coming Soon)</a
                 >
-                <a
-                  href="/solutions/business"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Business</a
+                <a href="#" class="disabled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Business (Coming Soon)</a
                 >
-                <a
-                  href="/solutions/municipality-city"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Municipality & City</a
+                <a href="#" class="disabled block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Municipality & City (Coming Soon)</a
                 >
               </div>
             </div>
             <a href="/whitepaper" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >Whitepaper</a
             >
-            <a
+            <!-- <a
               href="/knowledge-base"
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Knowledge Base</a
             >
             <a href="/about-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >About Us</a
-            >
+            > -->
             <a href="/contact-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >Contact Us</a
             >
@@ -222,6 +218,10 @@ import Button from './Button.astro'
   .rotated {
     transition: transform 250ms ease-in-out;
     transform: rotateX(180deg);
+  }
+
+  .disabled {
+    cursor: not-allowed;
   }
 </style>
 

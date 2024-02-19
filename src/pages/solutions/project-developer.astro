@@ -7,6 +7,8 @@ import { Image } from 'astro:assets'
 import gardenImage from '../../images/garden.png'
 import Timeline from '../../components/Timeline.astro'
 import CTASection from '../../components/CTASection.astro'
+import Button from '../../components/Button.astro'
+import { Icon } from 'astro-icon/components'
 
 const features = [
   {
@@ -72,13 +74,7 @@ const timeBlocks = [
           <div class="relative pl-16">
             <dt class="text-base text-xl font-bold leading-7 text-gray-900">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
-                  ></path>
-                </svg>
+                <Icon name="heroicons:bolt" class="h-12 w-12 p-2 text-gray-800 text-white group-hover:text-mint-green-600" />
               </div>
               10x faster financing of renewable energy projects
             </dt>
@@ -90,13 +86,7 @@ const timeBlocks = [
           <div class="relative pl-16">
             <dt class="text-base text-xl font-bold leading-7 text-gray-900">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-                  ></path>
-                </svg>
+                <Icon name="heroicons:currency-dollar" class="h-12 w-12 p-2 text-gray-800 text-white group-hover:text-mint-green-600" />
               </div>
               50% lower transaction costs
             </dt>
@@ -107,13 +97,7 @@ const timeBlocks = [
           <div class="relative pl-16">
             <dt class="text-base text-xl font-bold leading-7 text-gray-900">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-                  ></path>
-                </svg>
+                <Icon name="heroicons:calendar-days" class="h-12 w-12 p-2 text-gray-800 text-white group-hover:text-mint-green-600" />
               </div>
               Same-day settlements
             </dt>
@@ -125,13 +109,7 @@ const timeBlocks = [
           <div class="relative pl-16">
             <dt class="text-base text-xl font-bold leading-7 text-gray-900">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-mint-green-600">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
-                  ></path>
-                </svg>
+                <Icon name="heroicons:globe-europe-africa" class="h-12 w-12 p-2 text-gray-800 text-white group-hover:text-mint-green-600" />
               </div>
               Access to a broader pool of investors
             </dt>
@@ -198,10 +176,16 @@ const timeBlocks = [
   </div>
 
   <!-- CTA -->
-  <CTASection bgColor="bg-blue-800">
-    <span slot="heading">Accelerate your funding cycle - Smarter, faster and responsible</span>
-    <span slot="description">Reach out to us to learn more about how you can benefit from being part of the community</span>
-    <span slot="action-text">Schedule a demo</span>
+  <CTASection
+    bgColor="bg-mint-green-800"
+    heading="Accelerate your funding cycle - Smarter, faster and responsible"
+    action-text="Schedule a demo"
+    actiion-link="https://calendly.com/metatron-demo/30min"
+    description="Reach out to us to learn more about how you can benefit from being part of the community"
+  >
+    <div class="mt-4 flex justify-center">
+      <Button href="https://calendly.com/metatron-demo/30min" target="_blank">Schedule a demo</Button>
+    </div>
   </CTASection>
 </Layout>
 

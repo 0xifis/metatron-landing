@@ -3,11 +3,11 @@ const { heading, description, bgColor = 'bg-white' } = Astro.props
 ---
 
 <div class={`${bgColor} py-16 sm:py-24`}>
-  <div class="max-w-7xl px-6 lg:px-8">
-    <h2 class="max-w-2xl text-center text-2xl tracking-tight sm:text-3xl lg:text-4xl">
+  <div class="mx-auto max-w-2xl px-6 lg:px-8">
+    <h2 class="max-w-2xl text-center text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
       {heading}
     </h2>
-    <p class="text-md mt-4 max-w-2xl text-center text-gray-400 sm:text-xl lg:text-2xl">
+    <p class="text-md mt-4 max-w-2xl text-center text-gray-400 text-white sm:text-xl lg:text-2xl">
       {description}
     </p>
     <slot />

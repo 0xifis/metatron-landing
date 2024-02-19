@@ -6,8 +6,10 @@ import Section from '../components/Section.astro'
 import Feature from '../components/Feature.astro'
 import BenefitSection from '../components/BenefitSection.astro'
 import QuoteBlock from '../components/QuoteBlock.astro'
+import Button from '../components/Button.astro'
 import financingImg from '../images/financing.png'
 import crowdImg from '../images/crowd.png'
+import CTASection from '../components/CTASection.astro'
 
 const features = [
   {
@@ -76,11 +78,12 @@ const features = [
     </div>
 
     <div slot="benefit-list">
-      <ul class="mt-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
+      <ul class="my-4 max-w-xl space-y-2 leading-7 text-gray-500 lg:max-w-none">
         <IconListItem text="Secure debt-free capital at almost 10-fold faster" />
         <IconListItem text="Enhance net asset value through global investor exposure" />
         <IconListItem text="Cut operational costs by eliminating intermediaries" />
       </ul>
+      <Button color="bg-mint-green-600" href="/solutions/project-developer">Learn More</Button>
     </div>
   </BenefitSection>
   <BenefitSection imageUrl={crowdImg.src} imageAlt="Product screenshot" imagePosition="right" bgColor="bg-white">
@@ -101,16 +104,6 @@ const features = [
         <IconListItem text="Benefit from projects that deliver energy 50% cheaper than home and onsite projects" />
         <IconListItem text="Enjoy flexible asset management — sell, or expand your stake with ease" />
       </ul>
-      <!-- <QuoteBlock
-        bgColor="bg-gray-800"
-        logoUrl="https://www.rolandberger.com/img/assets/RoBe_Logotype_White_Digital.png"
-        logoAlt="Roland Berger"
-        quoteText="We firmly believe that asset tokenization will grow to become a market worth at least USD 10 trillion by 2030."
-        authorImageUrl="https://img.rolandberger.com/img/Stage-Logos/b_standard_800x960_stage_logo_none.png"
-        authorImageAlt="Roland Berger Logo"
-        authorName="Roland Berger"
-        authorDate="October 2023"
-      /> -->
     </div>
   </BenefitSection>
   <!-- <BenefitSection
@@ -139,6 +132,18 @@ const features = [
       </ul>
     </div>
   </BenefitSection> -->
+  <!-- CTA -->
+  <CTASection
+    bgColor="bg-mint-green-800"
+    heading="Accelerate your funding cycle - Smarter, faster and responsible"
+    action-text="Schedule a demo"
+    actiion-link="https://calendly.com/metatron-demo/30min"
+    description="Reach out to us to learn more about how you can benefit from being part of the community"
+  >
+    <div class="mt-4 flex justify-center">
+      <Button href="https://calendly.com/metatron-demo/30min" target="_blank">Schedule a demo</Button>
+    </div>
+  </CTASection>
 </Layout>
 
 <style>
