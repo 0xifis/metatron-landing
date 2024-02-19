@@ -957,6 +957,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookieconsent@npm:^3":
+  version: 3.1.3
+  resolution: "@types/cookieconsent@npm:3.1.3"
+  dependencies:
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/082cc4fb8740e62366300fc8847ba7a2d869fd990ba7d4e22e9c66862a10a39c5aa76d8e11f4eb5305813c7026273f32ad99f059e4dfbe6c79b312f177050e74
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.12
   resolution: "@types/debug@npm:4.1.12"
@@ -1306,8 +1315,10 @@ __metadata:
     "@iconify-json/fa6-solid": "npm:^1.1.20"
     "@iconify-json/heroicons": "npm:^1.1.19"
     "@tailwindcss/forms": "npm:^0.5.7"
+    "@types/cookieconsent": "npm:^3"
     astro: "npm:^4.3.2"
     astro-icon: "npm:^1.1.0"
+    cookieconsent: "npm:^3.1.1"
     husky: "npm:^9.0.11"
     lint-staged: "npm:^15.2.2"
     prettier: "npm:^3.2.5"
@@ -1843,6 +1854,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookieconsent@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "cookieconsent@npm:3.1.1"
+  checksum: 10c0/ada43b26e7368702130fe98b278ea05550a426b954784ae92467de9ee618ae1029c02441f7e2204cd05b4d441bc1a5126791539bc7d55c3b43fb8b4840f0884c
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -1909,6 +1927,13 @@ __metadata:
   dependencies:
     css-tree: "npm:~2.2.0"
   checksum: 10c0/ab4beb1e97dd7e207c10e9925405b45f15a6cd1b4880a8686ad573aa6d476aed28b4121a666cffd26c37a26179f7b54741f7c257543003bfb244d06a62ad569b
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.0.2":
+  version: 3.1.3
+  resolution: "csstype@npm:3.1.3"
+  checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
   languageName: node
   linkType: hard
 
