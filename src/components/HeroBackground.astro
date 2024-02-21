@@ -1,5 +1,28 @@
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js"></script>
+<!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js"></script>
 <spline-viewer
-  style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; z-index:0; pointer-events:all;"
+  style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; z-index:0; pointer-events:all; "
   loading-anim-type="spinner-small-light"
-  url="https://prod.spline.design/gweq8rpAugvx6rZh/scene.splinecode"></spline-viewer>
+  url="https://prod.spline.design/gweq8rpAugvx6rZh/scene.splinecode"></spline-viewer> -->
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  id="hero-video-background"
+  class="absolute inset-0 z-0 h-screen w-screen object-cover opacity-0 transition-opacity duration-1000 ease-in-out"
+>
+  <source src="/hero-video.mp4" type="video/mp4" />
+  <!-- Add additional source tags for other video formats if needed -->
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  let video = document.getElementById('hero-video-background') as HTMLVideoElement
+  if (video) {
+    video.addEventListener('loadedmetadata', function () {
+      video.style.opacity = '1' // Set opacity to 1 to fade in
+    })
+  }
+  video.playbackRate = 0.3
+</script>
